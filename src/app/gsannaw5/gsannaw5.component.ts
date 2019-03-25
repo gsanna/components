@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class Gsannaw5Component implements OnInit {
 
   constructor() { }
+  
+  partyOut;
 
   colorGenerator = () =>
   {
