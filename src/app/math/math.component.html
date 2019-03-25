@@ -1,19 +1,29 @@
-<div style="background:grey">
-    <h2 style="color:turquoise">This is Math!</h2>
-    <!-- <p *ngFor='let v of addEqual'> -->
-        <input type="number" [(ngModel)]='numberOne'> + 
-        <input type="number" [(ngModel)]='numberTwo'> 
-        <button (click)='addEqual()'>=</button> 
+<mat-card style="background-color:cornflowerblue">
+    <mat-card-title style="color:turquoise">This is Math!</mat-card-title>
+        <mat-form-field>
+            <input matInput placeholder="Number 1" type="number" [(ngModel)]='numberOne'>
+        </mat-form-field>
+            + 
+        <mat-form-field>
+            <input matInput placeholder="Number 2" type="number" [(ngModel)]='numberTwo'> 
+        </mat-form-field>
+        <button mat-raised-button (click)='addEqual()'>=</button> 
         <span>{{ totalNumbers }}</span>
-    <!-- </p> [(ngModel)]='totalNumbers' -->
     <br>
-    <input type="number" [(ngModel)]='squNumber'> √2
-        <!-- <input type="number" [(ngModel)]='numberTwo'>  -->
+    <mat-form-field>
+        <input type="number" [(ngModel)]='squNumber'>
+    </mat-form-field>
+     √2
         <button (click)='squareEqual()'>=</button> 
         <span>{{ squTotal }}</span>
     <br>
-    <input type="number" [(ngModel)]='powOne'> ^
-        <input type="number" [(ngModel)]='powTwo'> 
-        <button (click)='powerEqual()'>=</button> 
-        <span>{{ powTotal }}</span>
-</div>
+    <mat-form-field>
+        <input type="number" [(ngModel)]='powOne'>
+    </mat-form-field>
+        ^
+    <mat-form-field>
+            <input type="number" [(ngModel)]='powTwo'>
+    </mat-form-field> 
+    <button (click)='powerEqual()'>=</button> 
+    <span>{{ powTotal }}</span>
+</mat-card>
